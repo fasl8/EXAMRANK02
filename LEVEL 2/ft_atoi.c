@@ -12,23 +12,23 @@
 
 // int	ft_atoi(const char *str);
 
-int	ft_atoi(const char *str)
+int ft_atoi(const char *str)
 {
-	int	result;
-	int	sign;
+    int sign; 
+    int result;
 
-	result = 0;
-	sign = 1;
-	while (*str == ' ' || *str == '\t')
-		str++;
-	if (*str == '+' || *str == '-')
-		str++;
-	if (*str == '-')
-		sign = -1;
-	while (*str >= '0' && *str <= '9')
-	{
-		result = result * 10 + *str - '0';
-		str++;
-	}
-	return (sign * result);
+    sign = 1;
+    result = 0;
+    while (*str == ' ' || *str == '\t')
+        str++;
+    if (*str == '-')
+        sign = -1;
+    if (*str == '-' || *str == '+')
+        str++;
+    while (*str >= '0' && *str <= '9')
+    {
+        result = result * 10 + *str - '0';
+        str++;
+    }
+    return(sign * result);
 }

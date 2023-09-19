@@ -11,39 +11,23 @@
 
 #include <stdlib.h>
 
-int	ft_strlen(char *s)
-{
-	int		i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(char *src)
+char    *ft_strdup(char *src)
 {
 	int		i;
 	char	*s;
 
-	if (!src)
-		return (NULL);
-	i = ft_strlen(src);
+	i = 0;
+	while (src[i] != '\0')
+		i++;
 	s = malloc(sizeof(char) * (i + 1));
 	if (s == NULL)
 		return (NULL);
 	i = 0;
-	while (src[i])
+	while (src[i] != '\0')
 	{
 		s[i] = src[i];
 		i++;
 	}
-	s[i] = '\0';
+	s[i] = src[i];
 	return (s);
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-// 	printf("%s", ft_strdup("qwe"));
-// }

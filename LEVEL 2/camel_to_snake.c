@@ -1,6 +1,6 @@
 // Assignment name  : camel_to_snake
 // Expected files   : camel_to_snake.c
-// Allowed functions: malloc, realloc, write
+// Allowed functions: malloc, free, realloc, write
 // --------------------------------------------------------------------------------
 
 // Write a program that takes a single string in lowerCamelCase format
@@ -9,8 +9,7 @@
 // A lowerCamelCase string is a string where each word begins with a capital letter
 // except for the first one.
 
-// A snake_case string is a string where each word is in lower case,
-// separated by
+// A snake_case string is a string where each word is in lower case, separated by
 // an underscore "_".
 
 // Examples:
@@ -23,9 +22,9 @@
 
 #include <unistd.h>
 
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	if (argc == 2)
@@ -34,8 +33,8 @@ int	main(int argc, char **argv)
 		{
 			if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
 			{
-				argv[1][i] = argv[1][i] + ' ';
 				write(1, "_", 1);
+				argv[1][i] += 32;
 			}
 			write(1, &argv[1][i], 1);
 			i++;

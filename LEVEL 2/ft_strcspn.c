@@ -10,7 +10,7 @@
 
 // size_t	ft_strcspn(const char *s, const char *reject);
 
-#include <stddef.h>
+#include <stdlib.h>
 
 size_t	ft_strcspn(const char *s, const char *reject)
 {
@@ -18,7 +18,6 @@ size_t	ft_strcspn(const char *s, const char *reject)
 	int	b;
 
 	a = 0;
-	b = 0;
 	while (s[a] != '\0')
 	{
 		b = 0;
@@ -32,10 +31,3 @@ size_t	ft_strcspn(const char *s, const char *reject)
 	}
 	return (a);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	printf("%zu", ft_strcspn("s", "r"));
-// }

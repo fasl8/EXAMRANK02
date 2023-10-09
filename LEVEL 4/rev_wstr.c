@@ -32,29 +32,37 @@
 
 int main(int argc, char **argv)
 {
+	int i;
 	int start;
 	int end;
 	int flag;
-	int i = 0;
 
+	i = 0;
 	if (argc == 2)
 	{
-		while (argv[1][i] != '\0')
+		//Finding the End of the String:
+		while(argv[1][i] != '\0')
 			i++;
+		//Finding Words and Reversing Order:
 		while (i >= 0)
 		{
-			while (argv[1][i] == '\0' || argv[1][i] == ' ' || argv[1][i] == '\t')
+			//Skipping White Spaces and Tabs:
+			while (argv[1][i] == ' ' || argv[1][i] == '\0' || argv[1][i] == '\t')
 				i--;
+			//Finding the End of a Word:
 			end = i;
-			while (argv[1][i] && argv[1][i] != ' ' && argv[1][i] != '\t')
+			//Finding the Start of the Word:
+			while (argv[1][i] != ' ' && argv[1][i] != '\0' && argv[1][i] != '\t')
 				i--;
 			start = i + 1;
 			flag = start;
+			//Reversing and Printing the Word:
 			while (start <= end)
 			{
 				write(1, &argv[1][start], 1);
 				start++;
 			}
+			//Printing Space Between Words:
 			if (flag != 0)
 			{
 				write(1, " ", 1);

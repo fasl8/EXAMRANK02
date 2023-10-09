@@ -16,33 +16,35 @@
 
 #include <stdlib.h>
 
-char **ft_split(char *str)
+char    **ft_split(char *str)
 {
-    int i = 0;
-    int k = 0;
-    int s;
-    char **split;
+	int		a;
+	int		b;
+	int		k;
+	char	**split;
 
-    split = (char **)malloc(sizeof(char *) * 256);
-    if (!split)
-        return (NULL);
-    while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
-        i++;
-    while (str[i])
-    {
-        s = 0;
-        split[k] = (char *)malloc(sizeof(char) * 4096);
-        if(!split[k])
-            return (NULL);
-        while (str[i] && str[i] != ' ' && str[i] != '\t' && str[i] != '\n')
-            split[k][s++] = str[i++];
-        while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
-            i++;
-        split[k][s] = '\0';
-        k++; 
-    }
-    split[k] = NULL;
-    return (split);
+	a = 0;
+	k = 0;
+	split = (char **)malloc(sizeof(char *) * 256);
+	if (!split)
+		return (NULL);
+	while (str[a] == ' ' || str[a] == '\t' || str[a] == '\n')
+		a++;
+	while (str[a])
+	{
+		b = 0;
+		split[k] = (char *)malloc(sizeof(char) * 4096);
+		if (!split[k])
+			return (NULL);
+		while (str[a] && str[a] != ' ' && str[a] != '\t' && str[a] != '\n')
+			split[k][b++] = str[a++];
+		while (str[a] == ' ' || str[a] == '\t' || str[a] == '\n')
+			a++;
+		split[k][b] = '\0';
+		k++;
+	}
+	split[k] = NULL;
+	return (split);
 }
 
 // #include <stdio.h>

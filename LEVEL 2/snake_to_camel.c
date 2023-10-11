@@ -31,7 +31,7 @@ int	main(int argc, char **argv)
 	{
 		while (argv[1][i])
 		{
-			if (argv[1][i] == '_')
+			if (i != 0 && argv[1][i] == '_')
 			{
 				argv[1][i] += 32;
 				i++;

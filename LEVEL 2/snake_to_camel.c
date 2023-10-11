@@ -31,11 +31,14 @@ int	main(int argc, char **argv)
 	{
 		while (argv[1][i])
 		{
-			if (i != 0 && argv[1][i] == '_')
+			if (argv[1][i] == '_')
 			{
-				argv[1][i] += 32;
-				i++;
-				argv[1][i] -= 32;
+				if (i > 0)
+				{
+					argv[1][i] += 32;
+					i++;
+					argv[1][i] -= 32;
+				}
 			}
 			write(1, &argv[1][i], 1);
 			i++;

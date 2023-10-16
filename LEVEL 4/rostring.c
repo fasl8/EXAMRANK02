@@ -38,51 +38,33 @@
 int	main(int argc, char **argv)
 {
 	int	i;
-	int	flag;
 	int	start;
-	int	end;
 
 	i = 0;
-	flag = 0;
-	if (argc > 1 && argv[1][0])
+	if (argc >= 2)
 	{
-		//Skipping Leading Spaces and Tabs:
-		while (argv[1][i] == ' ' || argv[1][i] == '\t')
+		while (argv[1][i] != '\0' && (argv[1][i] == ' ' || argv[1][i] == '\t'))
 			i++;
-		//Finding the Start of the First Word:
 		start = i;
-		//Finding the End of the First Word
-		while (argv[1][i] != '\0' && argv[1][i] != ' ' && argv[1][i] != '\t')
-			i++;
-		end = i;
-		//Skipping Trailing Spaces and Tabs After the First Word
-		while (argv[1][i] == ' ' || argv[1][i] == '\t')
-			i++;
-		//Printing Words:
 		while (argv[1][i] != '\0')
 		{
-			//Handling Multiple Spaces:
-			while ((argv[1][i] == ' ' && argv[1][i + 1] == ' ')
-				|| (argv[1][i] == '\t' && argv[1][i + 1] == '\t'))
+			while (argv[1][i] != ' ' && argv[1][i] != '\t' && argv[1][i] != '\0')
 				i++;
-			//Printing Non-Space Characters:
-			if (argv[1][i] == ' ' || argv[1][i] == '\t')
-				flag = 1;
-			else
+			while (argv[1][i] != '\0' && (argv[1][i] == ' '|| argv[1][i] == '\t'))
+				i++;
+			while ((argv[1][i] != '\0' && argv[1][i] != ' ' && argv[1][i] != '\t') 
+				&& (argv[1][i - 1] == ' ' || argv[1][i - 1] == '\t'))
 			{
-				if (flag)
-					write(1, " ", 1);
-				flag = 0;
-				write(1, &argv[1][i], 1);
+				while (argv[1][i] != ' ' && argv[1][i] != '\t' && argv[1][i] != '\0')
+				{
+					write(1, &argv[1][i], 1);
+					i++;
+				}
+				write(1, " ", 1);
+				i++;
 			}
-			i++;
 		}
-		//Printing Last Word:
-		if (flag)
-			write(1, " ", 1);
-		if (flag == 0)
-			write(1, " ", 1);
-		while (start < end)
+		while (argv[1][start] != ' ' && argv[1][i] != '\t' && argv[1][start] != '\0')
 		{
 			write(1, &argv[1][start], 1);
 			start++;

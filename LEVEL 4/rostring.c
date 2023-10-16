@@ -48,7 +48,7 @@ int	main(int argc, char **argv)
 		start = i;
 		while (argv[1][i] != '\0')
 		{
-			while (argv[1][i] != ' ' && argv[1][i] != '\t' && argv[1][i] != '\0')
+			while (argv[1][i] != '\0' && argv[1][i] != ' ' && argv[1][i] != '\t')
 				i++;
 			while (argv[1][i] != '\0' && (argv[1][i] == ' '|| argv[1][i] == '\t'))
 				i++;
@@ -64,7 +64,7 @@ int	main(int argc, char **argv)
 				i++;
 			}
 		}
-		while (argv[1][start] != ' ' && argv[1][i] != '\t' && argv[1][start] != '\0')
+		while (argv[1][start] != '\0' && argv[1][start] != ' ' && argv[1][i] != '\t')
 		{
 			write(1, &argv[1][start], 1);
 			start++;
@@ -72,4 +72,3 @@ int	main(int argc, char **argv)
 	}
 	write(1, "\n", 1);
 }
-

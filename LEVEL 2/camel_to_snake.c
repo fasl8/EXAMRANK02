@@ -35,7 +35,7 @@ int	main(int argc, char **argv)
 			{
 				if (i > 0)
 				{
-					argv[1][i] = argv[1][i] + ' ';
+					argv[1][i] += 32;
 					write(1, "_", 1);
 				}
 			}

@@ -119,3 +119,66 @@ int	main(int argc, char **argv)
 	write(1, "\n", 1);
 	return (0);
 }
+
+// #include <unistd.h>
+
+// int	ft_atoi(char *str)
+// {
+// 	int		result;
+
+// 	result = 0;
+// 	while (*str != '\0')
+// 	{
+// 		result = result * 10 + *str - '0';
+// 		str++;
+// 	}
+// 	return (result);
+// }
+
+// void	ft_putnbr(int nb)
+// {
+// 	char	digit;
+
+// 	if (nb >= 10)
+// 		ft_putnbr(nb / 10);
+// 	digit = nb % 10 + '0';
+// 	write(1, &digit, 1);
+// }
+
+// int	is_prime(int nb)
+// {
+// 	int		i;
+
+// 	i = 2;
+// 	if (nb <= 1)
+// 		return (0);
+// 	while (i * i <= nb)
+// 	{
+// 		if (nb % i == 0)
+// 			return (0);
+// 		i++;
+// 	}
+// 	return (1);
+// }
+
+// int	main(int argc, char **argv)
+// {
+// 	int		nb;
+// 	int		sum;
+
+// 	if (argc == 2)
+// 	{
+// 		nb = ft_atoi(argv[1]);
+// 		sum = 0;
+// 		while (nb > 0)
+// 		{
+// 			if (is_prime(nb))
+// 				sum += nb;
+// 			nb--;
+// 		}
+// 		ft_putnbr(sum);
+// 	}
+// 	else
+// 		write(1, "0", 1);
+// 	write(1, "\n", 1);
+// }

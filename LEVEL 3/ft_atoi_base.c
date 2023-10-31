@@ -91,7 +91,7 @@ int ft_atoi_base(const char *str, int str_base)
 	}
 	return (nb * sign);
 }
-//GRADEME SUCCESS
+
 #include<stdio.h>
 int main()
 {
@@ -99,12 +99,3 @@ int main()
     return 0;
 }
 
-#include <stdio.h>
-
-int	main(void)
-{
-	int	result;
-
-	result = ft_atoi_base("12fdb3", 6);
-	printf("%d\n", result);
-}

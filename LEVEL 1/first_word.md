@@ -1,8 +1,8 @@
 # first_ word
 
-| Assignment name | Expected files | llowed functions |
-| --------------- | -------------  | ---------------- |
-| first_word      | first_word.c   | write            |
+| Assignment name | Expected files | Allowed functions |
+| --------------- | -------------  | ----------------- |
+| first_word      | first_word.c   | write             |
 
 ### write the code step by step:
 * Write a program that takes a string and displays its first word, followed by a newline.

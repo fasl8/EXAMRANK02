@@ -11,6 +11,7 @@
 
 1. write a program that takes a string: ``` int main(int argc, char **argv) ```
 2. displays its first word:
+   - #include <unistd.h> : add header file for write function
   ```
   while (argv[1][i] == ' ' || argv[1][i] == '\t')
       i++;

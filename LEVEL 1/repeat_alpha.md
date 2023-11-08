@@ -11,7 +11,7 @@
 * If the number of arguments is not 1, just display a newline.
 
 1. Write a program: ``` int main(int argc, char **argv) ```
-2. each alphabetical character as many times as its alphabetical index:
+2. repeating each alphabetical character as many times as its alphabetical index:
    - calculate way: re + argv[1][i] - 'a' -> 1 + 97 - 97 = 1
    - re + argv[1][i] - 'a' = 1 + 98 - 97 = 2
    - after calculate write the alpha acording to re variable

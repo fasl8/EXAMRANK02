@@ -20,7 +20,7 @@
       i++;
   }
   ```
-3. If the number of parameters is not 1, or if there are no words:
+3. If the number of parameters is not 1, or if there are no words. display a newline:
 ```
   if (argc == 2)
   {

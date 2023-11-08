@@ -28,7 +28,7 @@ while (argv[1][i])
             i++;
         }
 ```
-3. If the number of arguments is not 1, just display a newline.:
+3. If the number of arguments is not 1, just display a newline:
 ```
   if (argc == 2)
   {

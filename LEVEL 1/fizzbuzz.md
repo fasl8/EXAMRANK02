@@ -44,7 +44,7 @@
         else
             write_number(i);
 ```
-- make a function to write the number 
+- make a function to write the number, convert the digit to a character.
 ```
 void write_number(int number)
 {

@@ -9,8 +9,8 @@
 * A word is a section of string delimited by spaces/tabs or by the start/end of the string.
 * If the number of parameters is not 1, or if there are no words, simply display a newline.
 
-  1. write a program that takes a string: ``` int main(int argc, char **argv) ```
-  2. displays its first word:
+1. write a program that takes a string: ``` int main(int argc, char **argv) ```
+2. displays its first word:
   ```
   while (argv[1][i] == ' ' || argv[1][i] == '\t')
       i++;
@@ -20,7 +20,7 @@
       i++;
   }
   ```
-  3. If the number of parameters is not 1, or if there are no words:
+3. If the number of parameters is not 1, or if there are no words:
 ```
   if (argc == 2)
   {

@@ -21,12 +21,12 @@
   }
   ```
   3. If the number of parameters is not 1, or if there are no words:
-  ```
+```
   if (argc == 2)
   {
   }
   write(1, "\n", 1);
 }
-  ```
+```
   
     

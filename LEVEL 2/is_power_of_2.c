@@ -23,6 +23,16 @@ int	is_power_of_2(unsigned int n)
 		return (0);
 }
 
+int	is_power_of_2(unsigned int n)
+{
+	if (n == 0)
+		return (0);
+    return ((n & (n - 1)) == 0);
+}
+//A power of 2 in binary has only one bit set. 
+//subtracting 1 from a power of 2, all bits to the right of the set bit turn to 1.
+//Performing a bitwise AND operation (&) between the number and its decremented value will result in 0 for powers of 2
+
 // #include <stdio.h>
 
 // int main(void)

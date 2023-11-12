@@ -60,7 +60,7 @@ void	ft_putnbr(int n)
 }
 
 
-int	main(int argc, char *argv[])
+int	main(int argc, char **argv)
 {
 	int	i;
 	int	nbr;

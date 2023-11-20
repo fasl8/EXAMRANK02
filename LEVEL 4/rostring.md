@@ -63,8 +63,8 @@
 6. If there's less than one argument, the program displays \n:
 
 ```
-if (argc >= 2)
-{
-}
-write(1, "\n", 1);
+	if (argc >= 2)
+	{
+	}
+	write(1, "\n", 1);
 ```

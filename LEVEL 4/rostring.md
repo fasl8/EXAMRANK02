@@ -12,11 +12,19 @@
 * If there's less than one argument, the program displays \n.
 
 1. Write a program that takes a string: ``` int	main(int argc, char **argv) ```
-2. c
-3. f
+2. the first word becomes the last, and others stay in the same order:
+	1. skipping any leading spaces or tabs in the input string and then setting the start variable to the index where the first word begins.
+	```
+ 	while (argv[1][i] != '\0' && (argv[1][i] == ' ' || argv[1][i] == '\t'))
+		i++;
+	start = i;
+ 	```
+   	2.  Print the first word (which is now the last)
+
 4. f
 5. f
-6. If there's less than one argument, the program displays \n.
+6. f
+7. If there's less than one argument, the program displays \n:
 ```
 	if (argc >= 2)
 	{

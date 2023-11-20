@@ -11,16 +11,16 @@
 * Words will be separated by only one space in the output.
 * If there's less than one argument, the program displays \n.
 
-  1. Write a program that takes a string: int	main(int argc, char **argv)
-  2. c
-  3. f
-  4. f
-  5. f
-  6. If there's less than one argument, the program displays \n.
-  ```
-  	if (argc >= 2)
+1. Write a program that takes a string: int	main(int argc, char **argv)
+2. c
+3. f
+4. f
+5. f
+6. If there's less than one argument, the program displays \n.
+```
+	if (argc >= 2)
 	{
-  }
+	}
   	write(1, "\n", 1);
 }
 ```

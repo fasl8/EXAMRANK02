@@ -11,7 +11,7 @@
 * Words will be separated by only one space in the output.
 * If there's less than one argument, the program displays \n.
 
-1. Write a program that takes a string: int	main(int argc, char **argv)
+1. Write a program that takes a string: ``` int	main(int argc, char **argv) ```
 2. c
 3. f
 4. f

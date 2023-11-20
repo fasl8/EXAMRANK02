@@ -27,10 +27,30 @@
 		start++;
 	}
  	```
-3. f
-4. f
-5. f
-6. If there's less than one argument, the program displays \n:
+3. A "word" is defined as a part of a string delimited either by spaces/tabs, or by the start/end of the string:
+	1. Move to the end of the current word
+	```
+    	while (argv[1][i] != '\0' && argv[1][i] != ' ' && argv[1][i] != '\t')
+                i++;
+   	2. Skip trailing spaces or tabs
+	```
+	while (argv[1][i] != '\0' && (argv[1][i] == ' ' || argv[1][i] == '\t'))
+                i++;
+5. Print the current word (displays this string after rotating it [one word to the left](step 2))
+   ```
+   while ((argv[1][i] != '\0' && argv[1][i] != ' ' && argv[1][i] != '\t') && (argv[1][i - 1] == ' ' || argv[1][i - 1] == '\t'))
+   {
+	while (argv[1][i] != '\0' && argv[1][i] != ' ' && argv[1][i] != '\t')
+	{
+		write(1, &argv[1][i], 1);
+		i++;
+	}
+6.  Words will be separated by only one space in the output:
+    ```
+   	write(1, " ", 1);
+	i++;
+   ```
+7. If there's less than one argument, the program displays \n:
 ```
 if (argc >= 2)
 {

@@ -15,7 +15,7 @@
 
 2. the first word becomes the last, and others stay in the same order:
 	
- 		1. skipping any leading spaces or tabs in the input string and then setting the start variable to the index where the first word begins.
+	1. skipping any leading spaces or tabs in the input string and then setting the start variable to the index where the first word begins.
 	
  	```
  		while (argv[1][i] != '\0' && (argv[1][i] == ' ' || argv[1][i] == '\t'))
@@ -23,7 +23,7 @@
 		start = i;
  	```
    	
-    		2. Print the first word (which is now the last)
+	2. Print the first word (which is now the last)
 	
  	```
  	while (argv[1][start] != '\0' && argv[1][start] != ' ' && argv[1][i] != '\t')

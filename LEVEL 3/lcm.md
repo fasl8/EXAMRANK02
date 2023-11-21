@@ -27,7 +27,7 @@
 		n = a;
 	else
 		n = b;
-``
+```
 4. You can calculate every multiples of each integers until you have a common multiple other than 0
 ```
 	while (1)

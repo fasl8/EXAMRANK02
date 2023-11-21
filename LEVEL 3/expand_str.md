@@ -20,7 +20,7 @@ while (argv[1][i] == ' ' || argv[1][i] == '\t')
 if (argv[1][i] == ' ' || argv[1][i] == '\t')
     flag = 1;
 ```
-4. Check if the character is not space or tab: ``` if (argv[1][i] != ' ' && argv[1][i] != '\t')) ```
+4. Check if the character is not space or tab: ``` if (argv[1][i] != ' ' && argv[1][i] != '\t') ```
 5. Insert three spaces between words if flag is set(displays it with exactly three spaces between each word)
 ```
                 if (flag)

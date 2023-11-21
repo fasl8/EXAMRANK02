@@ -60,8 +60,8 @@
 		i++
  	}
    ```
-* (argv[1][i] != '\0' && argv[1][i] != ' ' && argv[1][i] != '\t'): continues until the end of the string is reached,current character is not a space or a tab.
-*  && (argv[1][i - 1] == ' ' || argv[1][i - 1] == '\t'): previous character was a space or a tab.
+* ``` (argv[1][i] != '\0' && argv[1][i] != ' ' && argv[1][i] != '\t') ``` : continues until the end of the string is reached,current character is not a space or a tab.
+* ``` && (argv[1][i - 1] == ' ' || argv[1][i - 1] == '\t') ```: previous character was a space or a tab.
 
 5.  Words will be separated by only one space in the output:
 

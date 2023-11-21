@@ -33,7 +33,7 @@
 	}
  	```
 
-3. A "word" is defined as a part of a string delimited either by spaces/tabs, or by the start/end of the string:
+3. A "word" is defined as a part of a string delimited either by spaces/tabs, or by the start/end of the string: ``` while (argv[1][i] != '\0' ```
 	
  	1. Move to the end of the current word
 

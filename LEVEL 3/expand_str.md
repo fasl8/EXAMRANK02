@@ -28,3 +28,12 @@ if (flag)
 ```
 6. Reset the flag: ``` flag = 0; ```
 7. Write the character to the standard output: ``` write(1, &argv[1][i], 1); ```
+8.  move to the next character in the string: ``` i++; ```
+9. If the number of parameters is not 1, or if there are no words, simply display a newline
+```
+if (argc == 2)
+{
+}
+write(1, "\n", 1);
+return (0);
+```

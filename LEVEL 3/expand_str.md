@@ -23,8 +23,8 @@ if (argv[1][i] == ' ' || argv[1][i] == '\t')
 4. Check if the character is not space or tab: ``` if (argv[1][i] != ' ' && argv[1][i] != '\t') ```
 5. Insert three spaces between words if flag is set(displays it with exactly three spaces between each word)
 ```
-                if (flag)
-                    write(1, "   ", 3);
+if (flag)
+    write(1, "   ", 3);
 ```
 6. Reset the flag: ``` flag = 0; ```
 7. Write the character to the standard output: ``` write(1, &argv[1][i], 1); ```

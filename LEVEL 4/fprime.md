@@ -24,7 +24,7 @@ if (number == 1)
       ```
       if (number == i)
              break;
-      ````
+      ```
      * Print '*' to separate factors ``` printf("*"); ```
      * Reduce the original number by dividing it by the factor ``` number /= i; ```
      * Reset the factor counter to 1 ``` i = 1; ```

@@ -64,7 +64,7 @@ int	main(int argc, char **argv)
 				i++;
 			}
 		}
-		while (argv[1][start] != '\0' && argv[1][start] != ' ' && argv[1][i] != '\t')
+		while (argv[1][start] != '\0' && argv[1][start] != ' ' && argv[1][start] != '\t')
 		{
 			write(1, &argv[1][start], 1);
 			start++;

@@ -17,7 +17,7 @@
 if (number == 1)
     printf("1");
 ```
-  4.  find prime factors of the given number ``` while (number > i++) ```
+  4. find prime factors of the given number ``` while (number > i++) ```
      * Check if i is a factor of the number ``` if (number % i == 0) ```
      * Print the factor ``` printf("%d", i); ```
      * Check if the factor is the last one

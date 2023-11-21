@@ -21,13 +21,19 @@ while(str[i] == ' ' || str[i] == '\t')
 ```
 3. Handle the sign (Minus signs ('-') are interpreted only if they are the first character of the string str[0])
 ```
-	if (str[0] == '-')
-	{
-		sign = -1;
-		i++;
-	}
-	else if (str[0] == '+')
-		i++;
+if (str[0] == '-')
+{
+	sign = -1;
+	i++;
+}
+else if (str[0] == '+')
+	i++;
 ```
 
-4. 
+4.  determining whether the current character in the string is a valid character in the given base (up to base 16).
+``` while (((str[i] >= '0' && str[i] <= '9') && (str_base <= 16)) || ((str[i] >= 'a' && str[i] <= 'f') || (str[i] >= 'A' && str[i] <= 'F'))) ```
+* Numeric Digits (0-9): (str[i] >= '0' && str[i] <= '9')
+* base will always be less than or equal to 16:  && (str_base <= 16))
+* Alphabetic Characters (a-f and A-F):  || ((str[i] >= 'a' && str[i] <= 'f') || (str[i] >= 'A' && str[i] <= 'F')))
+5. updated in each iteration to shift its digits to the left by a position, making room for the next digit to be added ``` nb = nb * str_base; ```
+6.  

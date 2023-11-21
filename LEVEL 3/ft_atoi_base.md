@@ -41,3 +41,15 @@ else if (str[0] == '+')
   if (str[i] >= '0' && str[i] <= '9')
 	nb = nb + str[i] - '0';
   ```
+7.  Lowercase Alphabetic Characters (a-f): (subtracting the ASCII value of 'a'. 10 is added to handle the fact that 'a' represents 10 in hexadecimal)
+  ```
+  else if (str[i] >= 'a' && str[i] <= 'f')
+	nb = nb + str[i] - 'a' + 10;
+  ```
+8.  Uppercase Alphabetic Characters (A-F): (subtracting the ASCII value of 'A'. 10 is added to handle the fact that 'A' represents 10 in hexadecimal.)
+  ```
+  else if (str[i] >= 'A' && str[i] <= 'F')
+	nb = nb + str[i] - 'A' + 10;
+  ```
+9. move to the next character in the string: ``` i++ ```
+10. calculates the final result by multiplying the accumulated numeric value (nb) by the sign (sign): ``` return (nb * sign); ```

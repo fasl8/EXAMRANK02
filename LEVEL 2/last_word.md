@@ -11,4 +11,5 @@
 
 1. Write a program: ``` int main(int argc, char **argv) ```
 2. iterates through the characters of the second command line argument: ``` while (argv[1][i]) ```
-3.  
+3. If a space is found and the next character is within the ASCII range 33 to 126 ``` if (argv[1][i] == ' ' && argv[1][i + 1] >= 33 && argv[1][i + 1] <= 126) ``` (represent printable characters, excluding space.) -> add index of the next character after the space ``` j++; ``` . (to mark the beginning of the last word in the string.)
+4. 

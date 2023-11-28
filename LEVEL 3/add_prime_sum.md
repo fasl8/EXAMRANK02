@@ -41,4 +41,8 @@ if (nb <= 1)
 ```
 4. continues as long as the square of i is less than or equal to nb (if a number nb has a factor greater than its square root, it must also have a corresponding factor smaller than its square root): ``` while (i * i <= nb) ```
 * example: i = 2 -> 2 * 2 = 4 <= 5 // i = 3 -> 3 * 3 = 9 <= 5 // factor(1, 5)
-6. 
+6. If a number has divisors other than 1 and itself, it is not a prime number, without any remainder: ``` if (nb % i == 0) ``` -> ``` return (0); ```
+7. Increments the value: ``` i++; ```
+8. completes without finding any factors, it means nb is a prime number, and the function returns 1: ``` return (1); ```
+
+# 

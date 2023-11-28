@@ -40,5 +40,5 @@ if (nb <= 1)
 	return (0);
 ```
 4. continues as long as the square of i is less than or equal to nb (if a number nb has a factor greater than its square root, it must also have a corresponding factor smaller than its square root): ``` while (i * i <= nb) ```
-example: i = 2 -> 2 * 2 = 4 <= 5 // i = 3 -> 3 * 3 = 9 <= 5 // factor(1, 5)
+* example: i = 2 -> 2 * 2 = 4 <= 5 // i = 3 -> 3 * 3 = 9 <= 5 // factor(1, 5)
 6. 

@@ -29,7 +29,7 @@
 2. continues as long as the current character *str is not the null terminator ('\0'): ``` while (*str != '\0') ```
 3. conversion of characters to an integer: ``` result = result * 10 + *str++ - '0'; ```
 * multiplies the current result by 10 (shifting digits left) and adds the numeric value of the current character *str. The character is converted to its numeric value by subtracting the ASCII value of '0'.
-4. Returns the final converted integer value: ``` return (result); ```
+4. returns the final converted integer value: ``` return (result); ```
 
 # Checks if the value is prime using is_prime function:
 1. function take integer and return integer: ``` int	is_prime(int nb) ```
@@ -45,4 +45,8 @@ if (nb <= 1)
 7. Increments the value: ``` i++; ```
 8. completes without finding any factors, it means nb is a prime number, and the function returns 1: ``` return (1); ```
 
-# 
+#  print an integer using ft_putnbr function
+1. function take integer and return any value: ``` void	ft_putnbr(int nbr) ```
+2. checks if the number is greater than or equal to 10: ``` if (nbr >= 10) ``` -> moving to the leftmost digit: ``` ft_putnbr(nbr / 10); ```
+3. calculates the last digit of the number by taking the remainder when dividing by 10,adds the ASCII value of '0' to convert the digit to its ASCII representation: ``` digit = nbr % 10 + '0'; ```
+4. writes the digit: ``` write(1, &digit, 1); ``` 

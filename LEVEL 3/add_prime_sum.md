@@ -25,12 +25,18 @@
 ```
 
 # conver argv[1] to integer using ft_atoi function:
-1. function return integer: ``` int	ft_atoi(char *str) ```
+1. function take string and return integer: ``` int	ft_atoi(char *str) ```
 2. continues as long as the current character *str is not the null terminator ('\0'): ``` while (*str != '\0') ```
 3. conversion of characters to an integer: ``` result = result * 10 + *str++ - '0'; ```
 * multiplies the current result by 10 (shifting digits left) and adds the numeric value of the current character *str. The character is converted to its numeric value by subtracting the ASCII value of '0'.
 4. Returns the final converted integer value: ``` return (result); ```
 
 # Checks if the value is prime using is_prime function:
-1. f
-2. 
+1. function take integer and return integer: ``` int	is_prime(int nb) ```
+2. any number greater than 1 is not divisible by 1, we start checking for divisibility from the next smallest number, which is 2. ``` i = 2; ```
+3. the argument is not a positive number, just display 0 followed by a newline. (number is not prime)
+```
+if (nb <= 1)
+	return (0);
+```
+4. continues as long as the square of i is less than or equal to nb

@@ -18,14 +18,10 @@ void	print_bits(unsigned char octet)
 {
 	int				i;
 	unsigned char	bit;
-//represent the 8 bits in unsigned char 
 	i = 8;
 
 	while (i--)
 	{
-//bit converted to a character by adding to the ascii value '0'.
-//bit only 0 or 1, adding 0 give ascii value of corresponding char 0 or 1
-//>> used to shift the bits of the octet value to the right by i positions.
 		bit = (octet >> i & 1) + '0';
 		write(1, &bit, 1);
 	}

@@ -14,7 +14,7 @@
 3. checking if the memory allocation for split was successful. If not, the function returns NULL:
 ```
 if (!split)
-		return (NULL);
+	return (NULL);
 ```
 4. skipping any leading spaces, tabs, or newlines in the input string:
 ```
@@ -23,4 +23,19 @@ while (str[a] == ' ' || str[a] == '\t' || str[a] == '\n')
 ```
 5. iterates through the input string until the end is reached: ``` while (str[a]) ```
 6. allocating memory for the current word in the split array ``` split[k] = (char *)malloc(sizeof(char) * 4096); ```
-7. 
+7. checking if the memory allocation for the current word was successful. If not, the function returns NULL
+```
+if (!split[k])
+	return (NULL);
+```
+8. copying characters from the input string to the current word
+```
+while (str[a] && str[a] != ' ' && str[a] != '\t' && str[a] != '\n')
+	split[k][b++] = str[a++];
+```
+9. skipping any trailing spaces, tabs, or newlines after the current word
+```
+while (str[a] == ' ' || str[a] == '\t' || str[a] == '\n')
+	a++;
+```
+10. 

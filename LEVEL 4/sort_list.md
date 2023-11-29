@@ -28,7 +28,7 @@ int ascending(int a, int b)
 ```
 
 1. Write the following functions: ``` t_list	*sort_list(t_list* lst, int (*cmp)(int, int)); ```
-2. swap to hold the value during swapping: `` int swap; ```
+2. swap to hold the value during swapping: ``` int swap; ```
 3. tmp to keep the original pointer to the list: ``` t_list *tmp; ``` -> to preserve the original list: ``` tmp = lst; ```
 4. iterates through the list until the last element is reached: ``` while (lst->next) ```
 5. checks if the elements need to be swapped based on the comparison function. If the comparison function returns 0 = not in the correct order: ``` if((*cmp) (lst->data, lst->next->data) == 0) ```

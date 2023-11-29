@@ -32,5 +32,35 @@ while (n)
 		len++;
 }
 ```
-7. allocates memory for the resulting string: ``` 
-7. 
+7. allocates memory for the resulting string: ``` result = (char *)malloc(sizeof(char) * (len + 1)); ```
+8. if the allocation fails, returns NULL
+```
+if (result == NULL)
+	return (NULL);
+```
+9. sets the null terminator at the end of the allocated memory: ``` result[len] = '\0'; ```
+10. special case for handling zero: (sets the first character of result to '0' and returns result)
+```
+if (nbr == 0)
+{
+	result[0] = '0';
+	return (result);
+}
+```
+11. special case for handling negative: (sets the first character of result to '-' and updates nbr to its absolute value)
+```
+if (nbr < 0)
+{
+	result[0] = '-';
+	nbr = -nbr;
+}
+```
+12. writes the digits of nbr from right to left in result:
+```
+while (nbr)
+{
+	result[--len] = nbr % 10 + '0';
+	nbr /= 10;
+}
+```
+13. returns the pointer to the allocated memory containing the resulting string: ``` return (result); ```  

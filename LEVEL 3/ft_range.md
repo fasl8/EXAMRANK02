@@ -21,4 +21,20 @@
      else
         len = end - start;
    ```
-5. 
+4. Allocate memory for the array of integers:
+```
+tab = malloc(sizeof(int) * len + 1);
+    if (!tab)
+        return (NULL);
+```
+5. Array Population:
+- iterates through the indices of the tab array from the highest index (len) to 0: ```  while (len >= 0) { ```
+- stores the current value of end in the array: ``` tab[len] = end; ```
+- checks whether the range is descending (end needs to be incremented to move towards start):
+```
+if (start > end)
+   end++;
+```
+- 
+
+6. 

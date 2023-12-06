@@ -38,5 +38,7 @@ while (str[a] && str[a] != ' ' && str[a] != '\t' && str[a] != '\n')
 while (str[a] == ' ' || str[a] == '\t' || str[a] == '\n')
 	a++;
 ```
-10. Adding a NULL pointer at the end of the split array to mark the end of the list of words: ``` split[k] = NULL; ```
-11.  Returning the array of strings: ``` return (split); ```
+10. Adding the null terminator to the current word to make it a valid string: ``` split[k][b] = '\0'; ```
+11. Incrementing the word count: ``` k++; ```
+12. Adding a NULL pointer at the end of the split array to mark the end of the list of words: ``` split[k] = NULL; ```
+13. Returning the array of strings: ``` return (split); ```

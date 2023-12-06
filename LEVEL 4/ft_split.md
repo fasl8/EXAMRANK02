@@ -38,4 +38,5 @@ while (str[a] && str[a] != ' ' && str[a] != '\t' && str[a] != '\n')
 while (str[a] == ' ' || str[a] == '\t' || str[a] == '\n')
 	a++;
 ```
-10. 
+10. Adding a NULL pointer at the end of the split array to mark the end of the list of words: ``` split[k] = NULL; ```
+11.  Returning the array of strings: ``` return (split); ```
